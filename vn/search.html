@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LapminerHayGayy | Search</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="center">
+            <h1> LapminerGoog</h1>
+        <input id="searchbar" onkeyup="search_animal()" type="text"
+
+        name="search" placeholder="Search animals..">
+
+        </div>
+
+    <!-- ordered list -->
+
+    <ol id='list'>
+
+        <li class="animals"><a href="/vn/shop/">Shop Online của Lapminer</a></li>
+
+       
+    </ol>
+<style>
+  #searchbar{
+
+     margin-left: 15%;
+
+     padding:15px;
+
+     border-radius: 10px;
+
+   }
+
+ 
+
+   input[type=text] {
+
+      width: 30%;
+
+      -webkit-transition: width 0.15s ease-in-out;
+
+      transition: width 0.15s ease-in-out;
+
+   }
+
+ 
+
+   /* When the input field gets focus,
+
+        change its width to 100% */
+
+   input[type=text]:focus {
+
+     width: 70%;
+
+   }
+
+ 
+
+  #list{
+
+    font-size:  1.5em;
+
+    margin-left: 90px;
+
+   }
+
+ 
+
+.animals{
+
+   display: list-item;    
+
+  } 
+
+.center {
+  text-align: center;
+  border: 3px solid green;
+    }
+</style>
+    
+<script>
+  // JavaScript code
+
+function search_animal() {
+
+    let input = document.getElementById('searchbar').value
+
+    input=input.toLowerCase();
+
+    let x = document.getElementsByClassName('animals');
+
+      
+
+    for (i = 0; i < x.length; i++) { 
+
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+
+            x[i].style.display="none";
+
+        }
+
+        else {
+
+            x[i].style.display="list-item";                 
+
+        }
+
+    }
+
+}
+
+
+</script>
+
+       </div>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    
+  
+</body>
+
+  </html>
